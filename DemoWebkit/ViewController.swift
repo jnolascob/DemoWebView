@@ -38,6 +38,15 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
         if (message == "Your login session has expired.Please Re-Login.") {
                 print("Iniciar sesion automaticamente nuevamente")
         }
+        
+        
+        //un ejemplo
+        let alertController = UIAlertController(title: "", message: message, preferredStyle: .Alert)
+        let otherAction = UIAlertAction(title: "OK", style: .Default) {
+            action in completionHandler()
+        }
+        alertController.addAction(otherAction)
+        presentViewController(alertController, animated: true, completion: nil)
     }
 
 
